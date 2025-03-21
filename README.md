@@ -76,7 +76,7 @@ User
 | prometheus | Prometheus data gathering | monitoring | cadvisor
 | grafana    | Monitoring visualization| monitoring | prometheus
 
-### CI/CD
+### Deployment and CI/CD
 
 | Workflow 			| Run on | Description |
 | -------- 			| -------- | -------- |
@@ -84,7 +84,7 @@ User
 | linters	| push to master/pull request | run python linters |
 | deploy	| push to master | deploy application to AWS |
 
-### Monitoring
+### Monitoring and Analysis
 
 For our project, we setup three monitoring tools. We setup cAdvisor, Prometheus, and Grafana. These three monitoring tools depend on one another. The dependency line is as follows: cAdvisor --> Prometheus --> Grafana. Grafana is setup runnin on the `/grafana` endpoint of our application. Monitoring tools endpoints:
 
@@ -104,32 +104,17 @@ For our project, we setup three monitoring tools. We setup cAdvisor, Prometheus,
 <img src="https://i.imgur.com/588I1ty.png" width=600>
 
 
+ALH is deployed on t2.medium CentOS Stream 8 EC2 instance hosted on AWS. The domain, [mlha11y.tech](https://mlha11y.tech), was bought and configured on Domain.com, and is secured with [Let's Encrypt](https://letsencrypt.org/) using `certbot-nginx`.
 
-### Deployment
-
-MLH-A11y is deployed on t2.medium CentOS Stream 8 EC2 instance hosted on AWS. The domain, [mlha11y.tech](https://mlha11y.tech), was bought and configured on Domain.com, and is secured with [Let's Encrypt](https://letsencrypt.org/) using `certbot-nginx`.
-
-## Issues Encountered
-
-#### Web Server/DB Issues
-
-When building our web server, we had some trouble using requesting data from our markdown files and converting it into React for the different unit pages. However, we got around this by using Axios. We decided to use `axios.get` in order to retrieve the markdown file and set its contents as a variable.
-
-#### Client Issues
-
-In launching our unit-based educational approach, we initially dealt with several barriers in finding appropriate libraries to easily and efficiently render lesson material, videos, and content. We immediately began looking at the options and settled on `react-markdown`, a library by `remarkjs` for rendering markdown files in React. We immediately came across an obstacle: delivering interactive and reactive markdown-based content - a key feature we wanted to implement to ensure that users would be able to get hands-on experience with coding using custom [Repl.it](https://replit.com) exercises. The base implementation of `react-markdown` did not enable us to render inline HTML, but we were able to resolve this issue by utilizing the `rehypeRaw` [package](https://github.com/rehypejs/rehype-raw), allowing us to both style and customize our Markdown templates to a greater degree.
-
-We also had some issues with created protected routes for some of the pages. We originally wanted to have the unit pages only be accessible when logged in, but we kept getting errors that various variables are undefined.
-
+## Challenges Encountered
+**Backend Integration:** Difficulties in integrating React with Flask for dynamic content delivery.
+**Database Management:** Challenges with PostgreSQL integration in a containerized environment.
+**Performance Optimization:** Initial deployment challenges related to Docker and AWS resource allocation.
 
 #### Production Issues
 
 We encountered several speed bumps with securing our routing, using `nginx` and Docker, and setting up monitoring tools like Prometheus and Grafana. Early on, the most notable issue was that our project's full dependencies would consistently crash our VM on each `docker-compose up --build` command. As a stop-gap, we had to reboot our t2.micro instance, remove all Docker containers, generated files, volumes, and images, and rebuild. This was a tedious process, but after we received the go-ahead to upgrade our instance to a t2.medium, we were able to resolve other docker-based issues with relative ease.
 
-## Authors
 
-- Guillermo Sanchez – [**@membriux**](https://github.com/membriux)
-- Nikhil Vytla - [**@nikhil-vytla**](https://github.com/nikhil-vytla)
-- Ashley Ye - [**@ashleyye**](https://github.com/ashleyye)
 
 
