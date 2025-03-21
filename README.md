@@ -4,10 +4,6 @@ Accessibility Learning Hub is a dynamic and educational platform designed to int
 ##### `source` [hackmd.io](https://hackmd.io/nvkpyo3UQTa689uGz373eg)
 ##### tags: `accessibility` `LMS` `education` `tech` `React` `Python` `Flask` `Docker` `Grafana` `Prometheus` `cAdvisor` `docker-compose`
 
-# MLH A11y
-
-**App Description:** Building an interactive learning management system (LMS) that helps expose MLH Fellows to digital accessibility by providing resources and an intro to automated accessibility testing.
-
 ### Table of Contents
 
 - [Setup/Installation](#SetupInstallation-)
