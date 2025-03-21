@@ -25,26 +25,21 @@ Accessibility Learning Hub is a dynamic and educational platform designed to int
 
 **2. Run the application:**
 
-Start the application using Docker:
+- Start the application using Docker:
 
-	docker-compose up -d --build
+		docker-compose up -d --build
 Access the web interface at http://localhost/.
 
 **3. Optional**
 
 	Navigate to `http://localhost/grafana` to set up Grafana
 	- 
-For more info, check out: [Docker monitoring with cAdvisor, Prometheus, and Grafana](https://medium.com/@mertcan.simsek276/docker-monitoring-with-cadvisor-prometheus-and-grafana-adefe1202bf8)
-
-## Tech Stack 🍔
+## Technology Stack 🍔
 
 ### Client
 
-We primarily used Markdown to create educational content for lessons and structure the majority of the website, which we then rendered into React. The React files are connected through the use of React Router, which allows the user to navigate between pages.
-
 - [**React**](https://reactjs.org/) – main front-end framework
 - [**React Markdown**](https://github.com/remarkjs/react-markdown) – render Markdown files in web app
-- [**React Router**](https://reactrouter.com/) - allows navigation between different webpages
 - [**Bootstrap**](https://getbootstrap.com/) - creates user-friendly components
 - [**rehypeRaw**](https://github.com/rehypejs/rehype-raw) - enables inline HTML rendering within Markdown
 - [**Axios**](https://github.com/sheaivey/react-axios) – supports get and post requests
