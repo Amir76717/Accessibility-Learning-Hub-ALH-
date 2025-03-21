@@ -47,15 +47,7 @@ Access the web interface at http://localhost/.
 - **GitHub Actions:** For CI/CD processes.
 - **Grafana & Prometheus:** For monitoring and analytics.
 
-### Web Server
-For our project, we integrated a Python Flask server that works as an API for sending/receiving data and handling user authentication.
-
-Tech Used
-- **Python**
-- **Flask**
-
 **API Endpoints**
-
 User authentication
 
 | HTTP Verb | Endpoint | Description |
@@ -63,20 +55,7 @@ User authentication
 | `POST`   | /register     | register new user     |
 | `POST`   | /login     | login user     |
 
-Other/Misc
-
-| HTTP Verb | Endpoint | Description |
-| -------- | --------  | -------- |
-| `GET`   | /health    | api health check  |
-
 ### Database 
-
-We installed a PostgreSQL database containerized using the PostgreSQL image in the Docker registry. 
-
-- [**PostgreSQL**](https://www.postgresql.org/) – database
-- [**Flask SQLAlchemy**](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) – ORM extension for handling our data from Postgre
-- [**Flask Migrate**](https://flask-migrate.readthedocs.io/en/latest/) – handles Flask SQLAlchemy database migrations 
-
 User
 
 | Property | Type | Description |
@@ -86,8 +65,6 @@ User
 
 
 ### Containers
-
-In our project, we containerized and isolated necessary components of our application. In addition, we created two different docker-compose files to differentiate production and development. This helped us be more efficient and productive developing in our project. Below is a table that represents the containers, networks, and dependencies of this project (from docker-compose):
 
 | Container Name | Component | Networks | Depends On
 | -------- | -------- | -------- | ---- | 
@@ -101,22 +78,11 @@ In our project, we containerized and isolated necessary components of our applic
 
 ### CI/CD
 
-For our continuous integration, we integrated linting testers for python in our project, docker-build tester, and a deploy workflow (embedded with an endpoint check to verify deployment) and a discord notification for a successful deployment.
-
-- Docker build – test client and web server docker images 
-- Linters (ex. `black` and `flake8` for Flask-based backend)
-- User authentication endpoint testing (see `test-prod.sh`)
-- Deployment – ssh to AWS CentOS instance and deploy app using docker-compose
-	- Success/Failure notification through Discord webhook
-		<img src="https://i.imgur.com/Y5hXmx5.png" height=300>
-
 | Workflow 			| Run on | Description |
 | -------- 			| -------- | -------- |
 | docker-build	| push to master/pull request | run docker-build tests |
 | linters	| push to master/pull request | run python linters |
 | deploy	| push to master | deploy application to AWS |
-
-
 
 ### Monitoring
 
