@@ -3,8 +3,8 @@ Accessibility Learning Hub is a dynamic and educational platform designed to int
 
 ### Table of Contents
 
-- [Setup/Installation](#SetupInstallation-)
-- [Tech Stack](#Tech-Stack-)
+- [Installation](#SetupInstallation-)
+- [Technology Stack](#Tech-Stack-)
   - [Client](#Client)
   - [Web server](#Web-Server)
   - [Database](#Database)
