@@ -104,16 +104,15 @@ For our project, we setup three monitoring tools. We setup cAdvisor, Prometheus,
 <img src="https://i.imgur.com/588I1ty.png" width=600>
 
 
-ALH is deployed on t2.medium CentOS Stream 8 EC2 instance hosted on AWS. The domain, [mlha11y.tech](https://mlha11y.tech), was bought and configured on Domain.com, and is secured with [Let's Encrypt](https://letsencrypt.org/) using `certbot-nginx`.
+ALH is deployed on t2.medium CentOS Stream 8 EC2 instance hosted on AWS. The domain, [ALH.tech](https://mlha11y.tech), was bought and configured on Domain.com, and is secured with [Let's Encrypt](https://letsencrypt.org/) using `certbot-nginx`.
 
 ## Challenges Encountered
 **Backend Integration:** Difficulties in integrating React with Flask for dynamic content delivery.
+
 **Database Management:** Challenges with PostgreSQL integration in a containerized environment.
+
 **Performance Optimization:** Initial deployment challenges related to Docker and AWS resource allocation.
 
-#### Production Issues
-
-We encountered several speed bumps with securing our routing, using `nginx` and Docker, and setting up monitoring tools like Prometheus and Grafana. Early on, the most notable issue was that our project's full dependencies would consistently crash our VM on each `docker-compose up --build` command. As a stop-gap, we had to reboot our t2.micro instance, remove all Docker containers, generated files, volumes, and images, and rebuild. This was a tedious process, but after we received the go-ahead to upgrade our instance to a t2.medium, we were able to resolve other docker-based issues with relative ease.
 
 
 
