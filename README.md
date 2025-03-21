@@ -5,13 +5,12 @@ Accessibility Learning Hub is a dynamic and educational platform designed to int
 
 - [Installation](#Installation-)
 - [Technology Stack](#Technology-Stack-)
-  - [Client](#Client)
-  - [Web server](#Web-Server)
-  - [Database](#Database)
-  - [Containers](#Containers)
-  - [CI/CD](#CI/CD)
-  - [Monitoring](#Monitoring)
-  - [Deployment and CI/CD](#Deployment-and-CI/CD)
+- [Features](#Features)
+- [Web server](#Web-Server)
+- [Database](#Database)
+- [Containers](#Containers)
+- [Monitoring and Analysis](#Monitoring-and-Analysis)
+- [Deployment and CI/CD](#Deployment-and-CI/CD)
 - [Challenges Encountered](#Challenges-Encountered)
 
 ## Installation 🏗
@@ -36,22 +35,24 @@ Access the web interface at http://localhost/.
 	- 
 ## Technology Stack 🍔
 
-### Client
-
-- [**React**](https://reactjs.org/) – main front-end framework
-- [**React Markdown**](https://github.com/remarkjs/react-markdown) – render Markdown files in web app
-- [**Bootstrap**](https://getbootstrap.com/) - creates user-friendly components
-- [**rehypeRaw**](https://github.com/rehypejs/rehype-raw) - enables inline HTML rendering within Markdown
-- [**Axios**](https://github.com/sheaivey/react-axios) – supports get and post requests
+### Frontend
+- **React:** Core framework for building the user interface.
+- **React Markdown:** For rendering educational content.
+- **Bootstrap:** For responsive design elements.
+### Backend
+- **Flask:** Serves as the API server.
+- **PostgreSQL:** Database for storing user data.
+### DevOps
+- **Docker:** For containerization and isolation of services.
+- **GitHub Actions:** For CI/CD processes.
+- **Grafana & Prometheus:** For monitoring and analytics.
 
 ### Web Server
-
 For our project, we integrated a Python Flask server that works as an API for sending/receiving data and handling user authentication.
 
 Tech Used
 - **Python**
-- [**Flask**](https://flask.palletsprojects.com/en/2.0.x/) – API, user auth
-
+- **Flask**
 
 **API Endpoints**
 
