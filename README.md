@@ -3,28 +3,38 @@ Accessibility Learning Hub is a dynamic and educational platform designed to int
 
 ### Table of Contents
 
-- [Installation](#SetupInstallation-)
-- [Technology Stack](#Tech-Stack-)
+- [Installation](#Installation-)
+- [Technology Stack](#Technology-Stack-)
   - [Client](#Client)
   - [Web server](#Web-Server)
   - [Database](#Database)
   - [Containers](#Containers)
   - [CI/CD](#CI/CD)
   - [Monitoring](#Monitoring)
-  - [Deployment](#Deployment)
-- [Issues Encountered](#Issues-Encountered)
-- [Authors](#Authors)
+  - [Deployment and CI/CD](#Deployment-and-CI/CD)
+- [Challenges Encountered](#Challenges-Encountered)
 
-## Setup/Installation 🏗
+## Installation 🏗
+**1. Prerequisites:**
 
-**Required**
-1. Install [Docker](https://docs.docker.com/get-docker/)
-2. Run `docker-compose up -d --build`
-3. Navigate to `http://localhost/` in your browser
+- Docker: Installation Guide
+- Clone the repository and navigate to the project directory:
 
-**Optional**
-1. Navigate to `http://localhost/grafana` to set up Grafana
-	- For more info, check out: [Docker monitoring with cAdvisor, Prometheus, and Grafana](https://medium.com/@mertcan.simsek276/docker-monitoring-with-cadvisor-prometheus-and-grafana-adefe1202bf8)
+		git clone https://github.com/your-github-username/Accessibility-Learning-Hub.git
+		cd Accessibility-Learning-Hub
+
+**2. Run the application:**
+
+Start the application using Docker:
+
+	docker-compose up -d --build
+Access the web interface at http://localhost/.
+
+**3. Optional**
+
+	Navigate to `http://localhost/grafana` to set up Grafana
+	- 
+For more info, check out: [Docker monitoring with cAdvisor, Prometheus, and Grafana](https://medium.com/@mertcan.simsek276/docker-monitoring-with-cadvisor-prometheus-and-grafana-adefe1202bf8)
 
 ## Tech Stack 🍔
 
