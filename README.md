@@ -109,8 +109,3 @@ For our project, we setup three monitoring tools. We setup cAdvisor, Prometheus,
 **Database Management:** Challenges with PostgreSQL integration in a containerized environment.
 
 **Performance Optimization:** Initial deployment challenges related to Docker and AWS resource allocation.
-
-
-
-
-
